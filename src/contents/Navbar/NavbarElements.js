@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import { Link as LinkS } from 'react-scroll' 
+import {
+    Link as LinkS
+} from 'react-scroll'
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.div `
     background: ${({pressed}) => (pressed ? 'black' : "")};
     background-color: ${({scrollNav}) => (scrollNav ? '#fff': '')};
     height: 80px;
@@ -15,13 +17,12 @@ export const NavbarContainer = styled.div`
     transition: 0.9s all ease-in-out;
     
     @media screen and (max-width: 768px){
-        height: 65px;
         transition: 0.8s all ease;
     }
 
 `
 
-export const NavbarContent = styled.div`
+export const NavbarContent = styled.div `
     align-items: center;
     display: flex;
     height: 100%;
@@ -30,14 +31,14 @@ export const NavbarContent = styled.div`
     justify-content: space-between;
 `;
 
-export const NavLogoContainer = styled.div`
+export const NavLogoContainer = styled.div `
     align-items: center;
     display: flex;
     flex-direction: row;
 
 `
 
-export const NavLogo = styled.h1`
+export const NavLogo = styled.h1 `
     /* color: #f5efef; */
     color: #373463;
     font-size: 2rem;
@@ -53,7 +54,7 @@ export const NavLogo = styled.h1`
     }
 `
 
-export const NavLogoImage = styled.div`
+export const NavLogoImage = styled.div `
     background: #B4161B;
     border-radius: 40px;
     height: 60px;
@@ -71,14 +72,14 @@ export const NavLogoImage = styled.div`
     }
 `
 
-export const Logo = styled.img`
+export const Logo = styled.img `
     width: 100%;
     height: 100%;
     object-fit: cover;
     
 `
 
-export const NavLinksContainer = styled.div`
+export const NavLinksContainer = styled.div `
     display: flex;
     
     @media screen and (max-width: 960px){
@@ -87,14 +88,14 @@ export const NavLinksContainer = styled.div`
 
 `
 
-export const NavLinkWrapper = styled.ul`
+export const NavLinkWrapper = styled.ul `
     display: flex;
     flex-direction: row;
     text-decoration: none;
     list-style: none;
 `
 
-export const NavLinkContainer = styled.div`
+export const NavLinkContainer = styled.div `
     align-items: center;
     display: flex;
     height: 80px;
@@ -111,7 +112,8 @@ export const NavLinkContainer = styled.div`
     }
 `
 
-export const NavLink = styled(LinkS)`
+export const NavLink = styled(LinkS)
+`
     /* color: #f5efef; */
     color: ${({ scrollNav }) => (scrollNav ? '#f5efef' : '#373463')};
     font-size: 1.3rem;
