@@ -36,7 +36,7 @@ function FooterSection() {
                     </InfoContainer>
                     <InfoContainer>
                         <MdPhone size={18} color="#9c5e5e" />
-                        <LocationText>Phone: +256700719619</LocationText>
+                        <LocationText>Phone: +256758019617</LocationText>
                     </InfoContainer>
                     <InfoContainer>
                         <FaGlobeAfrica size={18} color="#9c5e5e" />
