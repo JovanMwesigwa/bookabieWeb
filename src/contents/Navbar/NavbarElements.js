@@ -15,6 +15,7 @@ export const NavbarContainer = styled.div`
     transition: 0.9s all ease-in-out;
     
     @media screen and (max-width: 768px){
+        height: 65px;
         transition: 0.8s all ease;
     }
 

@@ -41,7 +41,7 @@ function NavBar() {
                         <NavLogo>Bookabie</NavLogo>
                     </NavLogoContainer>
 
-                    <SideBarComponent pressed={isOpened} onClick={toggle} />
+                    <SideBarComponent pressed={isOpened} onClick={toggle} scrollNav={scrollNav} />
 
                     <NavLinksContainer >
                         <NavLinkWrapper>
@@ -56,7 +56,7 @@ function NavBar() {
                             </NavLinkContainer>
                         </NavLinkWrapper>
                     </NavLinksContainer>
-                        <HamburgerComponent pressed={isOpened} onClick={toggle} />
+                        <HamburgerComponent pressed={isOpened} onClick={toggle} scrollNav={scrollNav} />
                 </NavbarContent>
             </NavbarContainer>   
         </>

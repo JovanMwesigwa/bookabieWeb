@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const HamContainer = styled.div`
     display: none;
+    
 
     &:hover{ 
         cursor: pointer;
