@@ -61,18 +61,25 @@ export const InfoSectionColumnContainer = styled.div`
 `;
 
 export const InfoSectionFirstRow = styled.div`
-    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
 
     @media screen and  (max-width: 960px){
-        margin: 0;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+        margin: 0px;
     }
 
     @media screen and  (max-width: 760px){
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
         margin: 0;
     }
 
     @media screen and  (max-width: 560px){
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
         margin: 0;
     }
 `;

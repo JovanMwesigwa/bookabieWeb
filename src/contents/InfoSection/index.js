@@ -2,6 +2,7 @@ import React from 'react'
 import { InfoSectionContainer, InfoHeader, InfoSectionFirstRow, InfoSectionSecondRow, InfoSectionColumnContainer } from './InfoSectionElements'
 import AppCardComponent from '../../components/AppCard'
 
+import {data} from '../../data/'
 
 function InfoSection() {
     return (
@@ -10,16 +11,16 @@ function InfoSection() {
                 <InfoHeader>ABOUT BOOKABIE</InfoHeader>
                 <InfoSectionColumnContainer>
 
-                    <InfoSectionFirstRow>
-                        <AppCardComponent />
-                        <AppCardComponent />
+                    <InfoSectionFirstRow >
+                        {
+                            data.map(item => (
+                                <div key={item.id}>
+                                    <AppCardComponent item={item} />
+                                </div>
+                                ))
+                            }
                     </InfoSectionFirstRow>
 
-                    <InfoSectionSecondRow>
-                        <AppCardComponent />
-                        <AppCardComponent />
-                    </InfoSectionSecondRow>
-                    
                 </InfoSectionColumnContainer>
             </InfoSectionContainer>
         </>

@@ -3,6 +3,7 @@ import { Link as LinkS } from 'react-scroll'
 
 export const NavbarContainer = styled.div`
     background: ${({pressed}) => (pressed ? 'black' : "")};
+    background-color: ${({scrollNav}) => (scrollNav ? '#fff': '')};
     height: 80px;
     width: 100%;
     right: 0;
@@ -11,6 +12,11 @@ export const NavbarContainer = styled.div`
     top: 0;
     position: sticky;
     z-index: 999;
+    transition: 0.9s all ease-in-out;
+    
+    @media screen and (max-width: 768px){
+        transition: 0.8s all ease;
+    }
 
 `
 
@@ -31,7 +37,8 @@ export const NavLogoContainer = styled.div`
 `
 
 export const NavLogo = styled.h1`
-    color: #f5efef;
+    /* color: #f5efef; */
+    color: #373463;
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -67,6 +74,7 @@ export const Logo = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 `
 
 export const NavLinksContainer = styled.div`
@@ -103,7 +111,8 @@ export const NavLinkContainer = styled.div`
 `
 
 export const NavLink = styled(LinkS)`
-    color: #f5efef;
+    /* color: #f5efef; */
+    color: ${({ scrollNav }) => (scrollNav ? '#f5efef' : '#373463')};
     font-size: 1.3rem;
     font-weight: 600;
     padding: 0 28px;

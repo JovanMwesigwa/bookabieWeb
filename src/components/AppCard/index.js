@@ -3,22 +3,23 @@ import { IconContainer, TextContainer, MainHeading, TextInfo, HeaderContainer, T
 import { MdStar, MdQuestionAnswer, MdBookmarkBorder, MdFeedback } from 'react-icons/md'
 
 
-function AppCardComponent() {
+function AppCardComponent({ item }) {
+
+    const IconName = item.icon
+    console.log(IconName);
     return (
         <>
             <TextInfoContainer>
                 <HeaderContainer>
                     <IconContainer>
-                        <MdBookmarkBorder size={38} color="#fff" />
+                        <MdStar size={38} color="#fff" />
                     </IconContainer>
                     <TextContainer>
                         <MainHeading>
-                            PERSONALIZED PROGRAMS IN LINE WITH YOUR
-                            GOALS AND EQUIPMENT
+                            {item.title}
                         </MainHeading>
                         <TextInfo>
-                        If you use a proxy server…
-                        your network administrator to make sure the proxy server is working. If you don't believe you should be using a proxy server: Go to the Chrome menu > Settings > Show advanced settings… > Change proxy settings… > LAN Settings and deselect "Use a proxy server for your LAN".
+                            {item.content}
                         </TextInfo>
                     </TextContainer>
                 </HeaderContainer>

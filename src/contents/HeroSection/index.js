@@ -1,10 +1,34 @@
 import React from 'react'
-import { ActionSection, HeroContainer, Img, SubmitButton, TextInput, PhoneImage, TextInfo, HeaderText, ImageContainer, HeroInfoContainer, TextContainer } from './HeroSectionElements'
+import { ActionSection, AppVideo, HeroContainer, Img, SubmitButton, TextInput, PhoneImage, TextInfo, HeaderText, ImageContainer, HeroInfoContainer, TextContainer } from './HeroSectionElements'
+
+import firebase, { database, firestore } from '../../Firebase/Firestore'
+import 'firebase/storage';     // for storage
+import 'firebase/database';    // for realtime database
+import 'firebase/firestore';   // for cloud firestore
 
 import kla from '../../assets/shopping.jpg';
-import phone from '../../assets/phone.png';
+import phone from '../../assets/phonepng.png'
+import video from '../../assets/video.mp4';
 
 function HeroSection() {
+  const [ text, setText ] = React.useState("")
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(text)
+    const db = firestore
+    db.collection("users").add({
+      email: text
+    }).then(res => {
+      console.log("Document written with ID: ", res.id);
+    }).catch(error => {
+      console.error("Error adding document: ", error);
+    });  
+    setText({
+      email: "",
+    });
+  }
+
     return (
         <>
           <HeroContainer>
@@ -27,14 +51,26 @@ function HeroSection() {
                     Its Free!
                 </TextInfo>
 
-                <ActionSection>
-                  <TextInput placeholder="Email Or Phone" />
-                  <SubmitButton type='submit' >Submit</SubmitButton>
+                <ActionSection onSubmit={handleSubmit}>
+                  <TextInput
+                    placeholder="Email Or Phone" 
+                    value={text}
+                    onChange={e => setText( e.target.value)}
+                   
+                   />
+                  <SubmitButton 
+                    type='submit'
+                   >Submit</SubmitButton>
                 </ActionSection>
 
               </TextContainer>
               <ImageContainer>
-                {/* <PhoneImage src={phone} alt="app" /> */}
+                <AppVideo src={video} 
+                  autoPlay={true} 
+                  muted = {true}
+                   loop={true} 
+                />
+                    <PhoneImage src={phone} alt="app" />
               </ImageContainer>
             </HeroInfoContainer>
           </HeroContainer>

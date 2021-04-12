@@ -14,12 +14,25 @@ function NavBar() {
 
     const [ isOpened, setIsOpened ] = useState(false)
 
+    const [ scrollNav, setScrollNav ] = useState(false);
+
+    const changeNav = () => {
+        if(window.scrollY >= 80){
+            setScrollNav(true)
+        }else{
+            setScrollNav(false)
+        }
+    }
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    },[])
     const toggle = () => {
         setIsOpened(!isOpened)
     }
     return (
         <>
-            <NavbarContainer pressed={isOpened} >
+            <NavbarContainer pressed={isOpened} scrollNav={scrollNav}>
                 <NavbarContent>
                     <NavLogoContainer>
                         <NavLogoImage>

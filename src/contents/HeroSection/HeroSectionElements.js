@@ -37,6 +37,28 @@ export const Img = styled.img`
     background: #232a34;
 `
 
+export const AppVideo = styled.video`
+    width: 240px;
+    border-radius: 8px;
+    height: 500px;
+    -o-object-fit: cover;
+    background: #232a34;
+    margin-right: 28px;
+
+    
+    @media screen and  (max-width: 960px){
+        -o-object-fit: fill;
+        border-radius: 8px;
+        width: 90%;
+        height: 400px;
+        
+    }
+
+    @media screen and  (max-width: 560px){
+        height: 350px;
+    }
+`
+
 export const HeroInfoContainer = styled.div`
     position: absolute;
     top: 30px;
@@ -54,7 +76,7 @@ export const HeroInfoContainer = styled.div`
         flex-direction: column;
         height: 100%;
         padding: 0;
-        
+        align-items: center;
         max-width: 100%;
     }
 
@@ -82,13 +104,15 @@ export const TextContainer = styled.div`
 `
 export const ImageContainer = styled.div`
     flex: 1;
-    background: #B4161B;
-    border-radius: 25px;
+    align-items: center;
 
     @media screen and  (max-width: 960px){
-        flex: 2;
+        align-self: center;
+        width: 200px;
+        height: 400;
     }
 `
+
 
 export const HeaderText = styled.h1`
     font-size: 2.5rem;
@@ -125,11 +149,21 @@ export const TextInfo = styled.p`
 `
 
 export const PhoneImage = styled.img`
-    
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    position: absolute;
+    top:75px;
+    right: 0;
+    width: 300px;
+    height: 500;
+    object-fit: cover;
     justify-self: flex-start;
+    z-index: 99;
+
+    /* These are to be deleted */
+    /* object-fit: cover; */
+
+    @media screen and  (max-width: 960px){
+        display: none;
+    }
 `
 
 export const TextInput = styled.input`
@@ -142,7 +176,7 @@ export const TextInput = styled.input`
     width: 100%;
 `
 
-export const ActionSection = styled.div`
+export const ActionSection = styled.form`
     display: flex;
     width: 80%;
     margin: 20px 0;
