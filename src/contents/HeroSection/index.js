@@ -24,9 +24,7 @@ function HeroSection() {
     }).catch(error => {
       console.error("Error adding document: ", error);
     });  
-    setText({
-      email: "",
-    });
+    setText("");
   }
 
     return (
