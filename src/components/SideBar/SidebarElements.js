@@ -7,7 +7,7 @@ export const SidebarContainer = styled.div`
 
 
     @media screen and (max-width: 960px){
-        background: black;
+        background: #fff;
         display: block;
         height: 650px;
         position: absolute;
@@ -42,7 +42,7 @@ export const NavLinkContainer = styled.div`
 `
 
 export const NavLink = styled(LinkS)`
-    color: #f5efef;
+    color: #373463;
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
