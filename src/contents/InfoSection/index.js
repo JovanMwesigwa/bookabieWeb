@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfoSectionContainer, InfoHeader, InfoSectionFirstRow, InfoSectionSecondRow, InfoSectionColumnContainer } from './InfoSectionElements'
+import { InfoSectionContainer, InfoHeader, InfoSectionFirstRow, InfoSectionColumnContainer } from './InfoSectionElements'
 import AppCardComponent from '../../components/AppCard'
 
 import {data} from '../../data/'

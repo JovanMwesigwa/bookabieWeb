@@ -1,7 +1,7 @@
 import React from 'react'
 import { ActionSection, AppVideo, HeroContainer, Img, SubmitButton, TextInput, PhoneImage, TextInfo, HeaderText, ImageContainer, HeroInfoContainer, TextContainer } from './HeroSectionElements'
 
-import firebase, { database, firestore } from '../../Firebase/Firestore'
+import { firestore } from '../../Firebase/Firestore'
 import 'firebase/storage';     // for storage
 import 'firebase/database';    // for realtime database
 import 'firebase/firestore';   // for cloud firestore
@@ -15,7 +15,6 @@ function HeroSection() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(text)
     const db = firestore
     db.collection("users").add({
       email: text

@@ -35,6 +35,14 @@ export const TextInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 75px 0;
+
+    @media screen and  (max-width: 960px){
+        margin: 45px 0;
+    }
+
+    @media screen and  (max-width: 760px){
+        margin: 25px 0;
+    }
 `;
 
 export const MainHeading = styled.h2`
@@ -43,7 +51,7 @@ export const MainHeading = styled.h2`
     font-size: 1.2rem;
     font-weight: bolder;
     flex-wrap: wrap;
-    line-height: 40px;
+    line-height: 30px;
     
     @media screen and  (max-width: 960px){
         font-size: 1.1rem;
@@ -73,8 +81,8 @@ export const IconContainer = styled.div`
     justify-content: center;
 
     @media screen and  (max-width: 960px){
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     @media screen and  (max-width: 760px){
@@ -82,19 +90,20 @@ export const IconContainer = styled.div`
     }
 
     @media screen and  (max-width: 560px){
-        width: 55px;
-        height: 55px;
+        width: 45px;
+        height: 45px;
     }
 `;
 
 export const TextInfo = styled.p`
     font-size: 0.9rem;
-    padding-top: 24px;
+    margin-top: 24px;
     letter-spacing: 1px;
     color: gray;
 
     @media screen and  (max-width: 960px){
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        margin-top: 15px;
     }
 
 `
