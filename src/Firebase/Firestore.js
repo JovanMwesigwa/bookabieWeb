@@ -3,15 +3,24 @@ import 'firebase/database';    // for realtime database
 import 'firebase/storage'
 import 'firebase/firestore';
 
+const API_KEY = `${process.env.FIREBASE_API_KEY}`;
+const FIREBASEAUTHDOMIAN = `${process.env.FIREBASE_AUTHDOMIAN}`;
+const PROJECT_ID = `${process.env.PROJECTID}`;
+const STORAGEBUCKET = `${process.env.STORAGE_BUCKET}`;
+const MESSAGINGSENDERID = `${process.env.MESSAGING_SENDER_ID}`;
+const APPID = `${process.env.APP_ID}`;
+const MEASUREMENTID = `${process.env.MEASUREMENT_ID}`;
+
+console.log(API_KEY)
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDJ1JTO2xxYXC2qy92sQ-THY16QP1QAH_w",
-    authDomain: "bookabieapp.firebaseapp.com",
-    projectId: "bookabieapp",
-    storageBucket: "bookabieapp.appspot.com",
-    messagingSenderId: "210060414757",
-    appId: "1:210060414757:web:0c1ae0a2d5c0d98e6094cc",
-    measurementId: "G-MT8EDTRRMS"
+    apiKey: API_KEY,
+    authDomain: FIREBASEAUTHDOMIAN,
+    projectId: PROJECT_ID,
+    storageBucket: STORAGEBUCKET,
+    messagingSenderId: MESSAGINGSENDERID,
+    appId: APPID,
+    measurementId: MEASUREMENTID
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
