@@ -53,7 +53,7 @@ function HeroSection() {
                     placeholder="Email Or Phone" 
                     value={text}
                     onChange={e => setText( e.target.value)}
-                   
+                    required
                    />
                   <SubmitButton 
                     type='submit'

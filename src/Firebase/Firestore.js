@@ -11,7 +11,6 @@ const MESSAGINGSENDERID = `${process.env.MESSAGING_SENDER_ID}`;
 const APPID = `${process.env.APP_ID}`;
 const MEASUREMENTID = `${process.env.MEASUREMENT_ID}`;
 
-console.log(API_KEY)
 
 const firebaseConfig = {
     apiKey: API_KEY,
