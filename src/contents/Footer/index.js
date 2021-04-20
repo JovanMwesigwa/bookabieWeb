@@ -40,7 +40,7 @@ function FooterSection() {
                     </InfoContainer>
                     <InfoContainer>
                         <FaGlobeAfrica size={18} color="#9c5e5e" />
-                        <LocationText>Website: www.bookabieapp.com</LocationText>
+                        <LocationText>Website: bookabieapp.netlify.app</LocationText>
                     </InfoContainer>
                 </AddressContainer>
             </ContactContainer>
